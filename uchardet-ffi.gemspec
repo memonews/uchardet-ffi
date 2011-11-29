@@ -5,16 +5,16 @@
 
 Gem::Specification.new do |s|
   s.name = %q{uchardet-ffi}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["jiayong.ou"]
   s.date = %q{2011-11-29}
-  s.description = %q{uchardet wraps the C++ implementation of Mozilla's Univeral Charset detector with a C interface. This gem wraps the C wrapper in Ruby via FFI. So in essense: Yo dawg, I herd you like wrappers, so I put an wrapper in your wrapper so you can wrap while you wrap }
+  s.description = %q{uchardet wraps the C++ implementation of Mozilla's Univeral Charset detector with a C interface. This gem wraps the C wrapper in Ruby. So in essense: Yo dawg, I herd you like wrappers, so I put an wrapper in your wrapper so you can wrap while you wrap }
   s.email = %q{jiayong.ou@memonews.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
-    "README.rdoc"
+    "README.markdown"
   ]
   s.files = [
     ".document",
@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
     "Gemfile",
     "Gemfile.lock",
     "LICENSE.txt",
-    "README.rdoc",
+    "README.markdown",
     "Rakefile",
     "VERSION",
     "lib/uchardet.rb",
@@ -35,7 +35,8 @@ Gem::Specification.new do |s|
     "spec/fixtures/utf8.txt",
     "spec/fixtures/windows-1252.txt",
     "spec/spec_helper.rb",
-    "spec/uchardet/detector_spec.rb"
+    "spec/uchardet/detector_spec.rb",
+    "uchardet-ffi.gemspec"
   ]
   s.homepage = %q{http://github.com/jou/uchardet-ffi}
   s.licenses = ["MIT"]
