@@ -23,6 +23,12 @@ describe Uchardet::Detector do
 
         detector.charset.should == expected_encoding
       end
+
+      it "should be able to detect #{expected_encoding} using class method" do
+        content = File.read(File.join(fixtures_dir, file))
+
+        Uchardet::Detector.detect(content) == expected_encoding
+      end
     end
 
     it "should be able to keep on detecting after reset" do

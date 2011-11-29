@@ -1,10 +1,28 @@
 module Uchardet
+  # Wrapper for the FFI functions to make the interface more Ruby-like.
+  #
+  # Can either be used as a single class method call with {.detect} or
+  # like the C API with {#handle}, {#done}, and {#charset}.
   class Detector
     # Create a {Proc} for {ObjectSpace.define_finalizer}
     #
     # @return [Proc]
     def self.finalizer(uchardet_pointer)
       proc { Uchardet::FFI.delete(uchardet_pointer) }
+    end
+
+    # Detect charset of given data
+    #
+    # @param [String] data the bunch of bytes to detect the encoding of
+    # @return [String] the detected encoding
+    def self.detect(data)
+      @detector ||= self.new
+      @detector.handle(data)
+      @detector.done
+      charset = @detector.charset
+      @detector.reset
+
+      charset
     end
 
     def initialize
