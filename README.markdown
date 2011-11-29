@@ -7,4 +7,4 @@ This gem makes [uchardet][] available in Ruby via [FFI][].
 
 # Requirements
 
-uchardet-ffi doesn't bundle uchardet. You need to install it for your OS first, e.g. `brew install uchardet` if you're on Mac OS X and use homebrew or with `apt-get install uchardet` (Debian >= wheezy or Ubuntu >= precise)
+uchardet-ffi doesn't bundle uchardet. You need to install it for your OS first, e.g. `brew install uchardet` if you're on Mac OS X and use homebrew or on Linux with `apt-get install uchardet` (Debian >= wheezy or Ubuntu >= precise)
