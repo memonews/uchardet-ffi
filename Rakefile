@@ -2,6 +2,7 @@
 
 require 'rubygems'
 require 'bundler'
+
 begin
   Bundler.setup(:default, :development)
 rescue Bundler::BundlerError => e
@@ -9,16 +10,17 @@ rescue Bundler::BundlerError => e
   $stderr.puts "Run `bundle install` to install missing gems"
   exit e.status_code
 end
-require 'rake'
 
+require 'rake'
 require 'jeweler'
+
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "uchardet-ffi"
   gem.homepage = "http://github.com/jou/uchardet-ffi"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{FFI wrapper for uchardet}
+  gem.description = %Q{uchardet wraps the C++ implementation of Mozilla's Univeral Charset detector with a C interface. This gem wraps the C wrapper in Ruby. So in essense: Yo dawg, I herd you like wrappers, so I put an wrapper in your wrapper so you can wrap while you wrap }
   gem.email = "jiayong.ou@memonews.com"
   gem.authors = ["jiayong.ou"]
   # dependencies defined in Gemfile
@@ -38,7 +40,7 @@ end
 
 task :default => :spec
 
-require 'rake/rdoctask'
+require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
