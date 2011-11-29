@@ -1,6 +1,7 @@
 require 'ffi'
 
 module Uchardet
+  # FFI definitions. Venture on your own peril.
   module FFI
     extend ::FFI::Library
 
