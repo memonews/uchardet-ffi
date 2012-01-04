@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{uchardet-ffi}
+  s.name = "uchardet-ffi"
   s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["jiayong.ou"]
-  s.date = %q{2012-01-04}
-  s.description = %q{uchardet wraps the C++ implementation of Mozilla's Univeral Charset detector with a C interface. This gem wraps the C wrapper in Ruby. So in essense: Yo dawg, I herd you like wrappers, so I put an wrapper in your wrapper so you can wrap while you wrap }
-  s.email = %q{jiayong.ou@memonews.com}
+  s.date = "2012-01-04"
+  s.description = "uchardet wraps the C++ implementation of Mozilla's Univeral Charset detector with a C interface. This gem wraps the C wrapper in Ruby. So in essense: Yo dawg, I herd you like wrappers, so I put an wrapper in your wrapper so you can wrap while you wrap "
+  s.email = "jiayong.ou@memonews.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.markdown"
@@ -38,11 +38,11 @@ Gem::Specification.new do |s|
     "spec/uchardet/detector_spec.rb",
     "uchardet-ffi.gemspec"
   ]
-  s.homepage = %q{http://github.com/jou/uchardet-ffi}
+  s.homepage = "http://github.com/jou/uchardet-ffi"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.6.2}
-  s.summary = %q{FFI wrapper for uchardet}
+  s.rubygems_version = "1.8.10"
+  s.summary = "FFI wrapper for uchardet"
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
@@ -53,12 +53,16 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.6.4"])
       s.add_development_dependency(%q<rcov>, [">= 0"])
+      s.add_development_dependency(%q<yard>, ["~> 0.7.3"])
+      s.add_development_dependency(%q<rdiscount>, ["~> 1.6.8"])
     else
       s.add_dependency(%q<ffi>, [">= 0"])
       s.add_dependency(%q<rspec>, ["~> 2.3.0"])
       s.add_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
       s.add_dependency(%q<rcov>, [">= 0"])
+      s.add_dependency(%q<yard>, ["~> 0.7.3"])
+      s.add_dependency(%q<rdiscount>, ["~> 1.6.8"])
     end
   else
     s.add_dependency(%q<ffi>, [">= 0"])
@@ -66,6 +70,8 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<bundler>, ["~> 1.0.0"])
     s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
     s.add_dependency(%q<rcov>, [">= 0"])
+    s.add_dependency(%q<yard>, ["~> 0.7.3"])
+    s.add_dependency(%q<rdiscount>, ["~> 1.6.8"])
   end
 end
 
