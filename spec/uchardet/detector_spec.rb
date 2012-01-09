@@ -45,6 +45,22 @@ describe Uchardet::Detector do
         detector.reset
       end
     end
+
+    it "should be able to cope with NULL bytes" do
+      detector = Uchardet::Detector.new
+
+      fixture_files.each do |file, expected_encoding|
+        content = "\x00".force_encoding('BINARY')
+        content << File.read(File.join(fixtures_dir, file)).force_encoding('BINARY')
+
+        detector.handle(content)
+        detector.done
+
+        detector.charset.should == expected_encoding
+
+        detector.reset
+      end
+    end
   end
 
   # Matz says we don't have to worry about finalizers being called:

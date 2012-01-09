@@ -39,8 +39,9 @@ module Uchardet
     def handle(data)
       data = data.to_s
       data_size = data.bytesize
+      data_ptr = ::FFI::MemoryPointer.from_string(data)
 
-      Uchardet::FFI.handle_data(@uchardet_pointer, data, data_size) == 0
+      Uchardet::FFI.handle_data(@uchardet_pointer, data_ptr, data_size) == 0
     end
 
     # Signals the detector that it has all the data it can get.
